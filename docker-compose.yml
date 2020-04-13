@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  elastic-LibrAIry:
-    container_name: elastic-LibrAIry
+  elastic-LDA:
+    container_name: elastic-LDA
     image: docker.elastic.co/elasticsearch/elasticsearch:7.0.0
     environment:
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g -Des.enforce.bootstrap.checks=true"
@@ -25,7 +25,7 @@ services:
   spring-client:
     container_name: spring-client
     environment:
-      - "ELASTIC_NAME=elastic-LibrAIry"
+      - "ELASTIC_NAME=elastic-LDA"
     build: ./spring
     depends_on: 
       - elastic-LibrAIry
