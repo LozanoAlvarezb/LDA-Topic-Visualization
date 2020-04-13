@@ -28,7 +28,7 @@ services:
       - "ELASTIC_NAME=elastic-LDA"
     build: ./spring
     depends_on: 
-      - elastic-LibrAIry
+      - elastic-LDA
     volumes:
       - ./spring:/app
     ports:
